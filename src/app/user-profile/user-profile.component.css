@@ -3,6 +3,7 @@ article {
   flex-direction: column;
   border: 1px solid gray;
   padding: 12px;
+  width: 30rem;
 }
 
 input {

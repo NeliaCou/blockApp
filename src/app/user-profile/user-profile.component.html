@@ -4,7 +4,8 @@
 <p>Prénom : {{user.firstName}}</p>
 
 
-    <label for="age">Two beer or not to beer</label>
-    <input id="age"[(ngModel)]="user.quote" placeholder="age">
-    <button type="button" [hidden]="hideAge"(click)="hideAge">Afficher/Masquer mon âge</button>
+    <label for="quote">Two beer or not to beer: {{ user.quote }}</label>
+    <input id="age"[(ngModel)]="user.quote" placeholder="citation">
+    <button type="button" (click)="hideAge()">Afficher/Masquer mon âge</button>
+    <p [hidden]="isHidden">Age: {{ user.age }}</p>
 </article>
