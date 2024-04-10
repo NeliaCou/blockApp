@@ -1,3 +1,3 @@
-export interface block {
+export interface Block {
     alphabet:string;
   }
