@@ -1,1 +1,10 @@
-<p>user-profile works!</p>
+<article>
+<img src={{user.photo}} alt="image">
+<p>Nom : {{user.name}}</p>
+<p>Prénom : {{user.firstName}}</p>
+
+
+    <label for="age">Two beer or not to beer</label>
+    <input id="age"[(ngModel)]="user.quote" placeholder="age">
+    <button type="button" [hidden]="hideAge"(click)="hideAge">Afficher/Masquer mon âge</button>
+</article>

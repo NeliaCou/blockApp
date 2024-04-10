@@ -1,0 +1,10 @@
+article {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  padding: 12px;
+}
+
+input {
+  width: 13rem;
+}
