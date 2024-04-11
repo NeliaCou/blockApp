@@ -20,9 +20,9 @@ export class UserProfileComponent {
     this.isHidden = !this.isHidden;
   }
 
-  toogleAgeVisibility(): void {
-    this.isHidden = !this.isHidden;
-  }
+  // toogleAgeVisibility(): void {
+  //   this.isHidden = !this.isHidden;
+  // }
 }
 
 
