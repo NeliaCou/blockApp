@@ -16,8 +16,11 @@ export class UserProfileComponent {
   };
 
   isHidden: boolean = false;
-  hideAge(): void {
-    this.isHidden = !this.isHidden;
+
+  hideAge(event : any): void {
+    this.isHidden = !this.isHidden;  
+    console.log(event);
+      
   }
 
   // toogleAgeVisibility(): void {

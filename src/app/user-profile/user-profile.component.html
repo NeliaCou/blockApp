@@ -5,7 +5,7 @@
 
 
     <label for="quote">Two beer or not to beer: {{ user.quote }}</label>
-    <input id="age"[(ngModel)]="user.quote" placeholder="citation">
-    <button type="button" (click)="hideAge()">Afficher/Masquer mon âge</button>
+    <input id="age" [(ngModel)]="user.quote" placeholder="citation">
+    <button type="button" (click)="hideAge($event)">Afficher/Masquer mon âge</button>
     <p [hidden]="isHidden">Age: {{ user.age }}</p>
 </article>

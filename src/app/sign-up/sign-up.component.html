@@ -1,1 +1,53 @@
-<p>sign-up works!</p>
+<form #signUp="ngForm" (ngSubmit)="onSubmit()">
+  
+    <fieldset>
+        <label for="firstName-order">firstName</label>
+        <input id="firstName-order" name="firstName-order" type="text" [(ngModel)] = "newUser.firstName" #firstName="ngModel" required minlength="3" maxlength="15">
+    </fieldset>
+  
+  <!-- Message d'erreurs de l'input firstName -->
+  <div *ngIf="signUp.submitted && firstName.errors">
+    <span *ngIf="firstName.errors?.['required']">Le {{ firstNameOrderInputPlaceholder }} est requis</span>
+    <span *ngIf="lastName.errors?.['minlength']">Le {{ firstNameOrderInputPlaceholder }} doit comporter au moins 3 caractères</span>
+    <span *ngIf="lastName.errors?.['maxlength']">Le {{ firstNameOrderInputPlaceholder }} ne doit pas dépasser 15 caractères</span>
+  </div>
+  
+
+  <fieldset>
+    <label for="lastName-order">lastName</label>
+    <input id="lastName-order" name="lastName-order" type="text" [(ngModel)] = "newUser.lastName" #lastName="ngModel" required minlength="3" maxlength="15">
+</fieldset>
+
+<!-- Message d'erreurs de l'input lastName -->
+<div *ngIf="signUp.submitted && lastName.errors">
+<span *ngIf="lastName.errors?.['required']">Le {{ lastNameOrderInputPlaceholder }} est requis</span>
+<span *ngIf="lastName.errors?.['minlength']">Le {{ lastNameOrderInputPlaceholder }} doit comporter au moins 3 caractères</span>
+<span *ngIf="lastName.errors?.['maxlength']">Le {{ lastNameOrderInputPlaceholder }} ne doit pas dépasser 15 caractères</span>
+</div>
+  
+
+
+  <fieldset>
+    <label for="email-order">Email</label>
+    <input id="email-order" name="email-order" [(ngModel)] = "newUser.email" #email="ngModel" type="email" required>
+  </fieldset>
+  
+  <!-- Message d'erreurs de email -->
+  <div *ngIf="signUp.submitted && email.errors">
+   <span *ngIf="email.errors?.['required']">L'{{emailOrderPlaceholder}} est invalide</span>
+  </div>
+  
+  <fieldset>
+    <label for="password-order">password</label>
+    <input id="password-order" name="password-order" [(ngModel)] = "newUser.password" #password="ngModel" type="password" required>
+  </fieldset>
+  
+  <!-- Message d'erreurs de password -->
+  <div *ngIf="signUp.submitted && password.errors">
+    <span *ngIf="password.errors?.['required']">Un {{ passwordOrderPlaceholder }} est requis</span>
+  </div>
+
+
+      <button type="reset">Restaurer</button>
+      <button type="submit">Sauvegarder</button>
+  </form>
