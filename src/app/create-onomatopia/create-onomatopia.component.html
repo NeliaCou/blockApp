@@ -1,0 +1,18 @@
+<h1>Play the game!</h1>
+
+<form #creatOnomatopia="ngForm" (ngSubmit)="createOnomatopia()">
+    <fieldset>
+        <label for="word">Write an onomatopia</label>
+        <input id="word" name="word" type="text" [(ngModel)] = "newWord.word" #word="ngModel" required minlength="3" maxlength="30">
+    </fieldset>
+  
+  <!-- Message d'erreurs de l'input word -->
+  <div *ngIf="creatOnomatopia.submitted && word.errors">
+    <span *ngIf="word.errors?.['required']">L'onomatopé est requis</span>
+    <span *ngIf="word.errors?.['minlength']">L'onomatopé doit comporter au moins 3 caractères</span>
+    <span *ngIf="word.errors?.['maxlength']">L'onomatopé ne doit pas dépasser 30 caractères</span>
+  </div>
+  
+      <button type="reset">Restaurer</button>
+      <button type="submit">Crée onomatopée</button>
+  </form>
