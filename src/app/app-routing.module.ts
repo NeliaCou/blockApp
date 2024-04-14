@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MyFormComponent } from './my-form/my-form.component'
+import { DeveloperComponent } from './developer/developer.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: "form-test",
     component: MyFormComponent
+  },
+  {
+    path: "developer-profil",
+    component: DeveloperComponent
   }
 ];
 

@@ -1,0 +1,42 @@
+<div class="container">
+<p>FirstName : {{newDev.firstName}}</p>
+<p>LastName : {{newDev.lastName}}</p>
+<p>Age : {{newDev.age}}</p>
+<p>Gender : {{newDev.gender}}</p>
+<p>Biography : {{newDev.bio}}</p>
+</div>
+
+<app-skill
+    [name]="newDev.skills.name"
+    [logo]="newDev.skills.logo"
+    [site]="newDev.skills.site"
+  />
+
+  
+
+
+  
+<!-- <div class="container">
+    <form (ngSubmit)="startDev()">
+      <h4>Are you a Dev ? (form training)</h4>
+      <label for="firstName">FirstName :</label>
+      <input id="firstName" type="string" name="firstName" [(ngModel)]="newDev.firstName" />
+      
+      <label for="lastName">LastName :</label>
+      <input id="lastName" type="string" name="lastName" [(ngModel)]="newDev.lastName" />
+  
+  
+      <label for="age">Age :</label>
+      <input id="age" type="number" name="age" [(ngModel)]="newDev.age" />
+  
+      <label for="gender">Gender :</label>
+      <input id="gender" type="string" name="gender" [(ngModel)]="newDev.gender" />
+      
+      <label for="bio">Biographie :</label>
+      <input id="bio" type="string" name="bio" [(ngModel)]="newDev.bio" />
+  
+      <div>
+        <button type="submit">Developer 💻</button>
+      </div>
+    </form>
+  </div> -->
