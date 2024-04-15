@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Developer } from '../models/developer.model';
-// import { JavaImg } from '../../assets/developer.skills/Java.Logo.png';
 
 @Component({
   selector: 'app-developer',
@@ -15,11 +14,11 @@ export class DeveloperComponent {
     age: 30,
     gender: "F",
     bio: "Dev",
-    skills: {
-      name: "Java",
-      logo: "JavaImg",
-      site: "awesome.site.fr",
-    }
+    skill: {
+      name: ["Java"],
+      logo: ["/assets/developer/java.png"],
+      site:["awesome.site.fr"],
+  } 
   };
 
   constructor() {}

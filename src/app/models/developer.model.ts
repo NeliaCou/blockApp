@@ -6,5 +6,5 @@ export interface Developer {
     age: number;
     gender: string;
     bio: string;
-    skills: Skill;
+    skill: Skill;
 }

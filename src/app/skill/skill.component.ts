@@ -8,12 +8,12 @@ import { Component, Input } from '@angular/core';
 export class SkillComponent {
   
   @Input()
-  name: string = "";
+  name: string[] = [];
 
   @Input()
-  logo: string ="";
+  logo: string[] = [];
 
   @Input()
-  site: string = "";
+  site: string[] = [];
 
 }
