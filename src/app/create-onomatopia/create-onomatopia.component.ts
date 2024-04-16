@@ -8,15 +8,14 @@ import { newOnomatopia } from '../models/onomatopia.model';
 })
 export class CreateOnomatopiaComponent {
 
-  newWord: newOnomatopia = {
-    word: "",
-  };
+  newWord: string = "";
 
   @Output()
   sendOnomatopiaToParent: EventEmitter<string> = new EventEmitter(); 
 
   createOnomatopia(): void {
-    this.sendOnomatopiaToParent.emit(this.newWord.word);
+    this.sendOnomatopiaToParent.emit(this.newWord);
+    this.newWord = "";
   }
 
 }
